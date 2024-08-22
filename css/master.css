@@ -20,6 +20,10 @@ ul {
 html {
   scroll-behavior: smooth;
 }
+button {
+  border: none;
+  cursor: pointer;
+}
 
 /* End Of Global Styles */
 
@@ -151,8 +155,6 @@ html {
   font-weight: 500;
 }
 #home .landing .text .btn-box button {
-  cursor: pointer;
-  border: none;
   border-radius: 50px;
   height: 41px;
 }
@@ -260,7 +262,7 @@ html {
 #trade {
   min-height: 100vh;
   max-width: 100vw;
-  padding: 7rem 9.375rem;
+  padding: 7rem 9.375rem 0rem;
   display: flex;
 }
 #trade article {
@@ -339,4 +341,82 @@ html {
     font-weight: 600;
   }
 }
+
 /* End Of Trade Page */
+
+/* Start Of Call-Us Section */
+
+#call-us {
+  position: relative;
+  height: fit-content;
+  max-width: 100vw;
+}
+#call-us .img-box {
+  width: 100%;
+  height: 100%;
+}
+#call-us .img-box img {
+  width: 100%;
+}
+#call-us .info {
+  position: absolute;
+  top: 30%;
+  left: 9.3175rem;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 2rem;
+}
+#call-us .info h2 {
+  font-size: 45px;
+  font-weight: 500;
+}
+#call-us .info p {
+  font-size: 25px;
+  font-weight: 400;
+}
+#call-us .info button {
+  width: 173px;
+  height: 41px;
+  border-radius: 50px;
+  background-color: #ffbb1c;
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  #call-us .info {
+    top: 20%;
+    left: 3rem;
+    width: 60%;
+    gap: 2rem;
+  }
+  #call-us .info h2 {
+    font-size: 20px;
+  }
+  #call-us .info p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #call-us .info {
+    top: 9%;
+    left: 1.8rem;
+    width: 70%;
+    gap: 0.8rem;
+  }
+  #call-us .info h2 {
+    font-size: 1rem;
+  }
+  #call-us .info p {
+    font-size: 0.6rem;
+  }
+  #call-us .info button {
+    width: 120px;
+    height: 27px;
+    font-size: 0.7rem;
+  }
+}
+
+/* End Of Call-Us Section */
