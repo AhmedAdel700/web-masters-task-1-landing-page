@@ -17,6 +17,9 @@ a {
 ul {
   list-style: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* End Of Global Styles */
 
@@ -29,8 +32,8 @@ ul {
 /* Start Of Home Page */
 
 #home {
-  max-height: 100vh;
-  max-height: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 5.3rem 1fr;
@@ -46,7 +49,7 @@ ul {
 }
 #home header nav {
   flex: 1;
-  padding: 0 0.5rem;
+  padding: 0 0.8rem;
 }
 #home header nav ul {
   display: flex;
@@ -54,7 +57,7 @@ ul {
   color: var(--white-color);
   font-weight: 300;
   font-size: 1.125rem;
-  gap: 3rem;
+  gap: 4rem;
 }
 #home header nav ul li a.active {
   position: relative;
@@ -94,6 +97,76 @@ ul {
   padding: 0 0.25rem;
 }
 
+#home .landing {
+  grid-area: 2 / 1 / 3 / 9;
+  background-image: url(../images/solar-panel.png);
+  background-size: cover;
+  background-position: center;
+}
+#home .landing .bar {
+  position: relative;
+  display: block;
+  height: 3px;
+  width: 20rem;
+  background-color: #575757;
+  margin: 5rem 13.4rem;
+}
+#home .landing .bar span {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-color: var(--white-color);
+}
+#home .landing .bar::after,
+#home .landing .bar::before {
+  position: absolute;
+  font-size: 18px;
+  color: var(--white-color);
+  top: -9px;
+}
+#home .landing .bar::after {
+  content: "01";
+  left: -50px;
+}
+#home .landing .bar::before {
+  content: "04";
+  right: -50px;
+}
+#home .landing .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 6rem 10rem;
+  color: var(--white-color);
+  width: 54%;
+  height: 27rem;
+}
+#home .landing .text h1 {
+  font-size: 70px;
+  font-weight: 500;
+}
+#home .landing .text p {
+  width: 80%;
+  font-size: 24px;
+  font-weight: 500;
+}
+#home .landing .text .btn-box button {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  height: 41px;
+}
+#home .landing .text .btn-box button:first-child {
+  width: 173px;
+  background-color: #3cab90;
+  color: var(--white-color);
+}
+#home .landing .text .btn-box button:last-child {
+  width: 208px;
+  background-color: #ffbb1c;
+  margin-left: 1.5rem;
+}
+
 @media (max-width: 1024px), (max-width: 991px) {
   #home header {
     padding: 0 2rem;
@@ -104,13 +177,34 @@ ul {
   #home header .logo img {
     width: 100%;
   }
-
   #home header nav ul {
     font-size: 1rem;
     gap: 1.2rem;
   }
   #home header .call-us span:last-child {
     font-size: 1rem;
+  }
+  #home .landing {
+    padding: 4rem 0 0 0;
+  }
+  #home .landing .bar {
+    width: 10rem;
+  }
+  #home .landing .bar {
+    width: 20rem;
+    margin: 2rem 9rem 0 9rem;
+  }
+  #home .landing .text {
+    margin: 4rem 5rem;
+    width: 75%;
+    height: 20rem;
+  }
+  #home .landing .text h1 {
+    font-size: 60px;
+  }
+  #home .landing .text p {
+    width: 80%;
+    font-size: 22px;
   }
 }
 
@@ -126,6 +220,123 @@ ul {
     display: block;
     color: var(--white-color);
   }
+
+  #home .landing .bar {
+    width: 12rem;
+    margin: 0rem auto;
+  }
+  #home .landing .text {
+    margin: 4rem auto;
+    width: 95%;
+  }
+  #home .landing .text h1 {
+    font-size: 35px;
+  }
+  #home .landing .text p {
+    width: 90%;
+    font-size: 18px;
+  }
+  #home .landing .text .btn-box button:first-child {
+    width: 150px;
+  }
+  #home .landing .text .btn-box button:last-child {
+    width: 180px;
+    margin-left: 1rem;
+  }
 }
 
+@media (max-width: 360px) {
+  #home .landing .text .btn-box button:first-child {
+    width: 130px;
+  }
+  #home .landing .text .btn-box button:last-child {
+    width: 160px;
+  }
+}
 /* End Of Home Page */
+
+/* Start Of Trade Page */
+
+#trade {
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 7rem 9.375rem;
+  display: flex;
+}
+#trade article {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#trade article h2 {
+  font-size: 60px;
+}
+#trade article p {
+  color: #475467;
+  font-size: 18px;
+  margin: 1rem 0;
+}
+#trade ul li,
+#trade ul li span {
+  font-size: 20px;
+  font-weight: 600;
+}
+#trade ul li {
+  color: #101828;
+  margin-bottom: 1rem;
+}
+#trade ul li span {
+  color: #84bd3a;
+  margin-right: 0.8rem;
+}
+#trade .images-box {
+  flex-basis: 50%;
+  position: relative;
+}
+#trade .images-box img {
+  position: absolute;
+  right: 0rem;
+  top: 10%;
+}
+
+@media (max-width: 1024px) {
+  #trade {
+    padding: 5rem 9.375rem;
+    flex-direction: column;
+    text-align: left;
+  }
+  #trade .images-box img {
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 991px) {
+  #trade article h2 {
+    font-size: 40px;
+  }
+  #trade article p {
+    font-size: 16px;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #trade {
+    padding: 2rem 1.5rem;
+  }
+  #trade .images-box img {
+    width: 90%;
+  }
+  #trade article h2 {
+    font-size: 25px;
+  }
+  #trade ul li,
+  #trade ul li span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+/* End Of Trade Page */
