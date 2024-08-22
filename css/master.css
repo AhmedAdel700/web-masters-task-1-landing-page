@@ -35,6 +35,7 @@ button:hover {
 :root {
   --white-color: #ffffff;
   --header-color: #0b9586;
+  --gray-color: #475467;
 }
 
 /* Start Of Home Page */
@@ -280,7 +281,7 @@ button:hover {
   font-size: 60px;
 }
 #trade article p {
-  color: #475467;
+  color: var(--gray-color);
   font-size: 18px;
   margin: 3rem 0;
 }
@@ -466,6 +467,78 @@ button:hover {
 }
 
 /* End Of Call-Us Section */
+
+/* Start Of Solar Kits Section */
+
+.solar-kits {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+}
+.solar-kits h2 {
+  font-size: 42px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.solar-kits .p-1 {
+  color: var(--gray-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  width: 40%;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.solar-kits .solar-kits-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+.solar-kits .solar-kits-examples .box {
+  width: 100%;
+  min-height: 490px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.solar-kits .solar-kits-examples .box img {
+  width: 100%;
+}
+.solar-kits .solar-kits-examples .box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+.solar-kits .solar-kits-examples .box p {
+  color: var(--gray-color);
+  margin: 20px;
+  line-height: 1.4;
+}
+.solar-kits .solar-kits-examples .box span {
+  margin: 20px;
+  color: #3cab90;
+  font-weight: 500;
+  cursor: pointer;
+}
+.solar-kits .solar-kits-examples .box span i {
+  margin-left: 0.4rem;
+}
+
+@media (max-width: 991px) {
+  .solar-kits h2 {
+    margin-top: 2rem;
+  }
+  .solar-kits .p-1 {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* End Of Solar Kits Section */
 
 /* Start Of Replacement Section*/
 
