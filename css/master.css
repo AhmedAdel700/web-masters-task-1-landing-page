@@ -425,21 +425,23 @@ button:hover {
 
 @media (max-width: 768px) {
   #call-us .info {
-    top: 15%;
-    left: 2rem;
-    width: 70%;
-    gap: 0.8rem;
+    top: 20%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    gap: 0.7rem;
   }
   #call-us .info h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   #call-us .info p {
     font-size: 0.6rem;
   }
   #call-us .info button {
     width: 120px;
-    height: 25px;
-    font-size: 0.7rem;
+    height: 24px;
+    font-size: 0.6rem;
+    margin: 0 auto;
   }
 }
 
