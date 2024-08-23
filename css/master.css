@@ -28,6 +28,13 @@ button {
 button:hover {
   opacity: 0.9;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
+section {
+  max-width: 100%;
+}
 
 /* End Of Global Styles */
 
@@ -265,7 +272,7 @@ button:hover {
 /* Start Of Trade Page */
 
 #trade {
-  min-height: 100vh;
+  min-height: 80vh;
   max-width: 100vw;
   padding: 3rem 9.375rem 0rem;
   display: flex;
@@ -472,7 +479,7 @@ button:hover {
 
 .solar-kits {
   max-width: 100vw;
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -613,3 +620,341 @@ button:hover {
 }
 
 /* End Of Replacement Section*/
+
+/* Start Of Our Values Section */
+
+.our-values {
+  margin-top: 2.5rem;
+  max-width: 100vw;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.our-values h2 {
+  font-size: 42px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.our-values .p-1 {
+  color: var(--gray-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.our-values .our-values-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
+  width: 60%;
+}
+.our-values .our-values-examples .box {
+  height: 420px;
+  padding: 32px;
+  background-color: #3cab8f0e;
+  border-radius: 12px;
+  border: 1px solid #3cab90;
+}
+.our-values .our-values-examples .box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.our-values .our-values-examples .box p {
+  color: var(--gray-color);
+  margin: 20px 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 991px) {
+  .our-values {
+    margin-top: 1.5rem;
+  }
+  .our-values h2 {
+    margin-top: 2rem;
+  }
+  .our-values .p-1 {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* End Of Our Values Section */
+
+/* Start Of What They Say Section */
+
+.what-they-say {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  gap: 3rem;
+  text-align: left;
+}
+.what-they-say .text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 290px;
+  width: 400px;
+  justify-content: space-between;
+}
+.what-they-say .text h3 {
+  font-size: 48px;
+}
+.what-they-say .text p {
+  line-height: 1.5;
+  color: #1c1c1c;
+  font-size: 18px;
+}
+.what-they-say .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #3cab8f11;
+  border-radius: 24px;
+  width: 708px;
+  height: 443px;
+}
+.what-they-say .card .container-1,
+.what-they-say .card .container-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.what-they-say .card .container-1 p {
+  color: #3cab90;
+  font-weight: 600;
+  font-size: 16px;
+}
+.what-they-say .card .container-1 .dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.what-they-say .card .container-1 .dots span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+.what-they-say .card .container-1 .dots span:first-child {
+  background-color: #6b6b6b;
+}
+.what-they-say .card p {
+  color: #101828;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 500;
+  width: 80%;
+}
+.what-they-say .card .container-2 .user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.what-they-say .card .container-2 .user-info div h4 {
+  margin-bottom: 0.25rem;
+}
+.what-they-say .card .container-2 .arrows {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.what-they-say .card .container-2 .arrows span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #1c1c1c;
+  cursor: pointer;
+}
+.what-they-say .card .container-2 .arrows span > i {
+  font-size: 22px;
+}
+
+@media (max-width: 767px) {
+  .what-they-say .card {
+    padding: 25px;
+    width: 650px;
+    height: 400px;
+  }
+  .what-they-say .card p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .what-they-say .card .container-2 .user-info div {
+    font-size: 0.7rem;
+  }
+  .what-they-say .card .container-2 .arrows span {
+    width: 38px;
+    height: 38px;
+  }
+  .what-they-say .card .container-2 .arrows span > i {
+    font-size: 18px;
+  }
+}
+
+/* End Of What They Say Section */
+
+/* Start Of Footer Section */
+
+footer {
+  min-height: 35vh;
+  background-color: #283646;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 150px;
+  flex-wrap: wrap;
+}
+footer .up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .up .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  color: var(--white-color);
+  font-weight: 300;
+}
+footer .up .subscibe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+footer .up .subscibe span {
+  color: var(--white-color);
+  align-self: flex-start;
+  font-weight: 300;
+}
+footer .up .subscibe input {
+  background-color: #4d5156;
+  border-radius: 109px;
+  border: 1px solid #b3bdc7;
+  outline: none;
+  width: 406px;
+  height: 48px;
+  text-indent: 1.2rem;
+  color: #b3bdc7;
+}
+footer .up .subscibe button {
+  position: absolute;
+  top: 29px;
+  right: 1px;
+  width: 147px;
+  height: 46px;
+  border-radius: 109px;
+  background-color: #ffbb1c;
+  color: var(--white-color);
+}
+footer hr {
+  border: none;
+  border-top: 1px solid #71777d;
+}
+footer .down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #92989f;
+  font-size: 12px;
+  line-height: 1.6;
+}
+footer .down .terms span:not(:first-child) {
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 991px) {
+  footer {
+    min-height: 20vh;
+    padding: 0 5rem;
+  }
+  footer .up {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .up .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+  footer .up .links {
+    margin-top: 1rem;
+  }
+  footer .up .subscibe {
+    margin-bottom: 1rem;
+  }
+  footer .up .subscibe input {
+    width: 350px;
+    height: 48px;
+  }
+  footer .up .subscibe button {
+    width: 130px;
+  }
+  footer .down {
+    text-align: center;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 1.6;
+    gap: 0.7rem;
+  }
+  footer .down .terms span:not(:first-child) {
+    margin: 0 0.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    min-height: 25vh;
+    padding: 0.5rem 0.5rem;
+  }
+  footer hr {
+    margin: 0 0 1rem;
+  }
+  footer .up .subscibe {
+    margin-bottom: 1rem;
+  }
+  footer .up .links {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+  footer .up .subscibe input {
+    width: 300px;
+    height: 35px;
+  }
+  footer .up .subscibe button {
+    width: 100px;
+    height: 33px;
+  }
+  footer .down {
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+    line-height: 1.4;
+    gap: 0.5rem;
+  }
+  footer .down .terms span:not(:first-child) {
+    margin: 0 0.25rem;
+  }
+}
+
+/* End Of Footer Section */
