@@ -43,6 +43,7 @@ section {
   --white-color: #ffffff;
   --header-color: #0b9586;
   --gray-color: #475467;
+  --transition: 0.35s;
 }
 
 /* Start Of Home Page */
@@ -781,6 +782,10 @@ section {
   border-radius: 50%;
   border: 1px solid #1c1c1c;
   cursor: pointer;
+  transition: var(--transition);
+}
+.what-they-say .card .container-2 .arrows span:hover {
+  background-color: #3cab8f5a;
 }
 .what-they-say .card .container-2 .arrows span > i {
   font-size: 22px;
@@ -834,6 +839,12 @@ footer .up .links {
   color: var(--white-color);
   font-weight: 300;
 }
+footer .up .links a {
+  transition: var(--transition);
+}
+footer .up .links a:hover {
+  color: #d2d1d1;
+}
 footer .up .subscibe {
   display: flex;
   flex-direction: column;
@@ -857,13 +868,15 @@ footer .up .subscibe input {
 }
 footer .up .subscibe button {
   position: absolute;
-  top: 29px;
-  right: 1px;
+  top: 28px;
+  right: 0;
   width: 147px;
-  height: 46px;
+  height: 48px;
   border-radius: 109px;
   background-color: #ffbb1c;
   color: var(--white-color);
+  font-size: 1rem;
+  font-weight: 300;
 }
 footer hr {
   border: none;
@@ -876,6 +889,12 @@ footer .down {
   color: #92989f;
   font-size: 12px;
   line-height: 1.6;
+}
+footer .down .terms span a {
+  transition: var(--transition);
+}
+footer .down .terms span a:hover {
+  color: #b5bbc0;
 }
 footer .down .terms span:not(:first-child) {
   margin: 0 0.5rem;
