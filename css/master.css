@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+/*
+
+  **** Index *****
+1. Global Styles
+2. Variables
+3. Home Page Section
+4.Trade Section
+5.Call Us Section
+6.Solar Kit Section
+7.Replacement Section
+8.Energy Section
+9.Our Values Section
+10. What They Say Section
+11. Footer Section
+
+Note: The Media Queries Of Any Section Is The Last Thing In The Section 
+*/
+
 /* Start Of Global Styles */
 
 * {
@@ -23,7 +41,7 @@ html {
 button {
   border: none;
   cursor: pointer;
-  transition: 0.35s;
+  transition: var(--transition);
 }
 button:hover {
   opacity: 0.9;
@@ -63,6 +81,28 @@ section {
   align-items: center;
   padding: 0 9.3rem;
   z-index: 10;
+  position: relative;
+}
+/* menu in small screens */
+#home header .nav-links-small-screens {
+  position: absolute;
+  top: -220px;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  background-color: var(--header-color);
+  transition: var(--transition);
+}
+#home header .nav-links-small-screens nav {
+  height: 100%;
+}
+#home header .nav-links-small-screens nav ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
 }
 #home header nav {
   flex: 1;
@@ -224,7 +264,7 @@ section {
 }
 
 @media (max-width: 768px) {
-  #home header nav,
+  #home header nav.big-screens,
   #home header .call-us {
     display: none;
   }
@@ -234,8 +274,15 @@ section {
   #home header .menu-icon {
     display: block;
     color: var(--white-color);
+    transition: 0.35s;
+    z-index: 100;
   }
-
+  #home header .menu-icon:hover {
+    color: var(--gray-color);
+  }
+  #home header .menu-icon:hover ~ .nav-links-small-screens {
+    top: 5.3rem; /* Slide down into view */
+  }
   #home .landing .bar {
     width: 12rem;
     margin: 0rem auto;
@@ -622,12 +669,152 @@ section {
 
 /* End Of Replacement Section*/
 
+/* Start Of Energy Section */
+
+.energy {
+  min-height: 100vh;
+  background-color: #ffbb1c1e;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 20rem 5rem;
+  gap: 2rem;
+}
+.energy .left-side {
+  min-width: 360px;
+  height: 233px;
+  text-align: left;
+  margin-top: 2rem;
+}
+.energy .left-side > * {
+  margin-bottom: 2rem;
+}
+.energy .left-side h2 {
+  font-size: 42px;
+  width: 80%;
+}
+.energy .left-side p {
+  font-size: 18px;
+  color: var(--gray-color);
+  line-height: 1.6;
+  width: 80%;
+}
+.energy .right-side {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 1rem;
+  gap: 2rem;
+}
+.energy .right-side .box {
+  height: 410px;
+  border: 2px solid #3cab8f88;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+  padding: 0 2rem;
+  background-color: #3cab8f10;
+}
+.energy .right-side .box:nth-child(3) {
+  height: 365px;
+}
+.energy .right-side .box h3 {
+  font-size: 20px;
+}
+.energy .right-side .box p {
+  line-height: 1.5;
+  color: var(--gray-color);
+}
+.energy .right-side .box span {
+  cursor: pointer;
+  color: #3cab90;
+}
+.energy .right-side .box span i {
+  margin-left: 0.4rem;
+}
+
+@media (max-width: 1300px) {
+  .energy {
+    flex-direction: column;
+    padding: 5rem 15rem;
+    gap: 2rem;
+  }
+  .energy .left-side {
+    margin-top: 0rem;
+  }
+  .energy .right-side {
+    margin-top: 10rem;
+    padding: 0;
+  }
+  .energy .right-side .box:nth-child(3) {
+    height: 410px;
+  }
+}
+
+@media (max-width: 991px) {
+  .energy {
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .energy .left-side {
+    width: fit-content;
+    height: 233px;
+    align-self: center;
+  }
+  .energy .left-side h2 {
+    font-size: 25px;
+  }
+  .energy .left-side p {
+    font-size: 16px;
+    color: var(--gray-color);
+    line-height: 1.6;
+  }
+  .energy .right-side {
+    margin-top: 2rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .energy {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  .energy .left-side {
+    width: fit-content;
+    height: 150px;
+    text-align: center;
+  }
+  .energy .left-side h2 {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .energy .left-side p {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    line-height: 1.6;
+    width: 100%;
+  }
+  .energy .left-side > * {
+    margin-bottom: 1rem;
+  }
+  .energy .left-side img {
+    margin: 0 auto 1rem;
+  }
+  .energy .right-side {
+    margin-top: 4rem;
+  }
+}
+
+/* End Of Energy Section */
+
 /* Start Of Our Values Section */
 
 .our-values {
   margin-top: 2.5rem;
   max-width: 100vw;
-  min-height: 75vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -956,13 +1143,16 @@ footer .down .terms span:not(:first-child) {
     gap: 0.5rem;
     font-size: 0.8rem;
   }
+  footer .up .subscibe .label {
+    align-self: center;
+  }
   footer .up .subscibe input {
     width: 300px;
     height: 35px;
   }
   footer .up .subscibe button {
     width: 100px;
-    height: 33px;
+    height: 35px;
   }
   footer .down {
     text-align: center;
