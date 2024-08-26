@@ -27,29 +27,37 @@ Note: The Media Queries Of Any Section Is The Last Thing In The Section
   font-family: "Inter", sans-serif;
   user-select: none;
 }
+
 a {
   text-decoration: none;
   color: unset;
   cursor: pointer;
 }
+
 ul {
   list-style: none;
 }
+
 html {
   scroll-behavior: smooth;
+  color-scheme: dark light;
 }
+
 button {
   border: none;
   cursor: pointer;
   transition: var(--transition);
 }
+
 button:hover {
   opacity: 0.9;
 }
+
 img {
   display: block;
   max-width: 100%;
 }
+
 section {
   max-width: 100%;
 }
@@ -73,6 +81,7 @@ section {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 5.3rem 1fr;
 }
+
 #home header {
   grid-area: 1 / 1 / 2 / 9;
   background-color: var(--header-color);
@@ -83,6 +92,7 @@ section {
   z-index: 10;
   position: relative;
 }
+
 /* menu in small screens */
 #home header .nav-links-small-screens {
   position: absolute;
@@ -93,9 +103,11 @@ section {
   background-color: var(--header-color);
   transition: var(--transition);
 }
+
 #home header .nav-links-small-screens nav {
   height: 100%;
 }
+
 #home header .nav-links-small-screens nav ul {
   display: flex;
   justify-content: center;
@@ -104,10 +116,12 @@ section {
   gap: 1rem;
   height: 100%;
 }
+
 #home header nav {
   flex: 1;
   padding: 0 0.8rem;
 }
+
 #home header nav ul {
   display: flex;
   justify-content: center;
@@ -116,6 +130,7 @@ section {
   font-size: 1.125rem;
   gap: 4rem;
 }
+
 #home header nav ul li a.active {
   position: relative;
   font-weight: 400;
@@ -124,6 +139,7 @@ section {
   border-radius: 5px;
   text-shadow: 2px 2px 2px black;
 }
+
 #home header nav ul li a.active::after {
   position: absolute;
   content: "";
@@ -135,19 +151,23 @@ section {
   border-radius: 5px;
   z-index: -1;
 }
+
 #home header .call-us {
   display: flex;
   flex-direction: column;
   color: var(--white-color);
 }
+
 #home header .call-us span:first-child {
   text-align: end;
   font-size: 1.125rem;
 }
+
 #home header .call-us span:last-child {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 #home header .menu-icon {
   display: none;
   cursor: pointer;
@@ -160,6 +180,7 @@ section {
   background-size: cover;
   background-position: center;
 }
+
 #home .landing .bar {
   position: relative;
   display: block;
@@ -168,12 +189,14 @@ section {
   background-color: #575757;
   margin: 5rem 13.4rem;
 }
+
 #home .landing .bar span {
   position: absolute;
   width: 30%;
   height: 100%;
   background-color: var(--white-color);
 }
+
 #home .landing .bar::after,
 #home .landing .bar::before {
   position: absolute;
@@ -181,14 +204,17 @@ section {
   color: var(--white-color);
   top: -9px;
 }
+
 #home .landing .bar::after {
   content: "01";
   left: -50px;
 }
+
 #home .landing .bar::before {
   content: "04";
   right: -50px;
 }
+
 #home .landing .text {
   display: flex;
   flex-direction: column;
@@ -198,24 +224,29 @@ section {
   width: 54%;
   height: 27rem;
 }
+
 #home .landing .text h1 {
   font-size: 70px;
   font-weight: 500;
 }
+
 #home .landing .text p {
   width: 80%;
   font-size: 24px;
   font-weight: 500;
 }
+
 #home .landing .text .btn-box button {
   border-radius: 50px;
   height: 41px;
 }
+
 #home .landing .text .btn-box button:first-child {
   width: 173px;
   background-color: #3cab90;
   color: var(--white-color);
 }
+
 #home .landing .text .btn-box button:last-child {
   width: 208px;
   background-color: #ffbb1c;
@@ -226,37 +257,47 @@ section {
   #home header {
     padding: 0 2rem;
   }
+
   #home header .logo {
     width: 10rem;
   }
+
   #home header .logo img {
     width: 100%;
   }
+
   #home header nav ul {
     font-size: 1rem;
     gap: 1.2rem;
   }
+
   #home header .call-us span:last-child {
     font-size: 1rem;
   }
+
   #home .landing {
     padding: 4rem 0 0 0;
   }
+
   #home .landing .bar {
     width: 10rem;
   }
+
   #home .landing .bar {
     width: 20rem;
     margin: 2rem 9rem 0 9rem;
   }
+
   #home .landing .text {
     margin: 4rem 5rem;
     width: 75%;
     height: 20rem;
   }
+
   #home .landing .text h1 {
     font-size: 60px;
   }
+
   #home .landing .text p {
     width: 80%;
     font-size: 22px;
@@ -268,39 +309,49 @@ section {
   #home header .call-us {
     display: none;
   }
+
   #home header .logo {
     width: 7rem;
   }
+
   #home header .menu-icon {
     display: block;
     color: var(--white-color);
     transition: 0.35s;
     z-index: 100;
   }
+
   #home header .menu-icon:hover {
     color: var(--gray-color);
   }
+
   #home header .menu-icon:hover ~ .nav-links-small-screens {
     top: 5.3rem; /* Slide down into view */
   }
+
   #home .landing .bar {
     width: 12rem;
     margin: 0rem auto;
   }
+
   #home .landing .text {
     margin: 4rem auto;
     width: 95%;
   }
+
   #home .landing .text h1 {
     font-size: 35px;
   }
+
   #home .landing .text p {
     width: 90%;
     font-size: 18px;
   }
+
   #home .landing .text .btn-box button:first-child {
     width: 150px;
   }
+
   #home .landing .text .btn-box button:last-child {
     width: 180px;
     margin-left: 1rem;
@@ -311,6 +362,7 @@ section {
   #home .landing .text .btn-box button:first-child {
     width: 130px;
   }
+
   #home .landing .text .btn-box button:last-child {
     width: 160px;
   }
@@ -326,12 +378,14 @@ section {
   display: flex;
   align-items: center;
 }
+
 #trade article {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 #trade article h2 {
   font-size: 60px;
 }
@@ -340,22 +394,27 @@ section {
   font-size: 18px;
   margin: 3rem 0;
 }
+
 #trade ul li,
 #trade ul li span {
   font-size: 20px;
   font-weight: 600;
 }
+
 #trade ul li {
   color: #101828;
   margin-bottom: 1rem;
 }
+
 #trade ul li span {
   color: #84bd3a;
   margin-right: 0.8rem;
 }
+
 #trade .images-box {
   flex-basis: 50%;
 }
+
 #trade .images-box img {
   position: relative;
   right: 0rem;
@@ -370,6 +429,7 @@ section {
     flex-direction: column;
     text-align: left;
   }
+
   #trade article {
     flex: 1;
     justify-content: space-around;
@@ -378,6 +438,7 @@ section {
   #trade article P {
     margin: 0rem;
   }
+
   #trade .images-box img {
     left: 50%;
     top: 0%;
@@ -391,6 +452,7 @@ section {
   #trade article h2 {
     font-size: 40px;
   }
+
   #trade article p {
     font-size: 16px;
     margin: 1rem 0;
@@ -401,12 +463,15 @@ section {
   #trade {
     padding: 2rem 1.5rem;
   }
+
   #trade .images-box img {
     width: 90%;
   }
+
   #trade article h2 {
     font-size: 25px;
   }
+
   #trade ul li,
   #trade ul li span {
     font-size: 0.8rem;
@@ -423,13 +488,16 @@ section {
   min-height: fit-content;
   max-width: 100vw;
 }
+
 #call-us .img-box {
   width: 100%;
   max-height: 100%;
 }
+
 #call-us .img-box img {
   width: 100%;
 }
+
 #call-us .info {
   position: absolute;
   top: 30%;
@@ -440,14 +508,17 @@ section {
   width: 50%;
   gap: 2rem;
 }
+
 #call-us .info h2 {
   font-size: 45px;
   font-weight: 500;
 }
+
 #call-us .info p {
   font-size: 25px;
   font-weight: 400;
 }
+
 #call-us .info button {
   width: 173px;
   height: 41px;
@@ -463,9 +534,11 @@ section {
     width: 60%;
     gap: 2rem;
   }
+
   #call-us .info h2 {
     font-size: 20px;
   }
+
   #call-us .info p {
     font-size: 16px;
   }
@@ -487,12 +560,15 @@ section {
     width: 100%;
     gap: 0.7rem;
   }
+
   #call-us .info h2 {
     font-size: 0.9rem;
   }
+
   #call-us .info p {
     font-size: 0.6rem;
   }
+
   #call-us .info button {
     width: 120px;
     height: 24px;
@@ -508,12 +584,15 @@ section {
     width: 70%;
     gap: 0.6rem;
   }
+
   #call-us .info h2 {
     font-size: 0.8rem;
   }
+
   #call-us .info p {
     font-size: 0.6rem;
   }
+
   #call-us .info button {
     width: 110px;
     height: 22px;
@@ -534,11 +613,13 @@ section {
   flex-direction: column;
   text-align: left;
 }
+
 .solar-kits h2 {
   font-size: 42px;
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
+
 .solar-kits .p-1 {
   color: var(--gray-color);
   font-size: 16px;
@@ -548,36 +629,43 @@ section {
   margin-bottom: 1.5rem;
   text-align: center;
 }
+
 .solar-kits .solar-kits-examples {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   padding: 1rem;
 }
+
 .solar-kits .solar-kits-examples .box {
   width: 100%;
   min-height: 490px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
 .solar-kits .solar-kits-examples .box img {
   width: 100%;
 }
+
 .solar-kits .solar-kits-examples .box h3 {
   font-size: 20px;
   font-weight: 600;
   margin: 20px;
 }
+
 .solar-kits .solar-kits-examples .box p {
   color: var(--gray-color);
   margin: 20px;
   line-height: 1.4;
 }
+
 .solar-kits .solar-kits-examples .box span {
   margin: 20px;
   color: #3cab90;
   font-weight: 500;
   cursor: pointer;
 }
+
 .solar-kits .solar-kits-examples .box span i {
   margin-left: 0.4rem;
 }
@@ -586,6 +674,7 @@ section {
   .solar-kits h2 {
     margin-top: 2rem;
   }
+
   .solar-kits .p-1 {
     font-size: 14px;
     width: 100%;
@@ -602,13 +691,16 @@ section {
   min-height: fit-content;
   position: relative;
 }
+
 .replacement .replacement-bg {
   width: 100%;
   max-height: 100%;
 }
+
 .replacement .replacement-bg img {
   width: 100%;
 }
+
 .replacement .text {
   position: absolute;
   top: 50%;
@@ -623,11 +715,13 @@ section {
   text-align: center;
   padding: 0 1.2rem;
 }
+
 .replacement .text h2 {
   font-size: 42px;
   font-weight: 500;
   margin: 3rem 0;
 }
+
 .replacement .text p {
   font-size: 18px;
   line-height: 1.4;
@@ -639,11 +733,13 @@ section {
     height: 14rem;
     padding: 0 2rem;
   }
+
   .replacement .text h2 {
     font-size: 24px;
     font-weight: 500;
     margin: 1rem 0;
   }
+
   .replacement .text p {
     font-size: 14px;
     line-height: 1.4;
@@ -656,11 +752,13 @@ section {
     height: 7.5rem;
     padding: 0 1rem;
   }
+
   .replacement .text h2 {
     font-size: 12px;
     font-weight: 400;
     margin: 1rem 0;
   }
+
   .replacement .text p {
     font-size: 8px;
     line-height: 1.4;
@@ -679,25 +777,30 @@ section {
   padding: 2.5rem 20rem 5rem;
   gap: 2rem;
 }
+
 .energy .left-side {
   min-width: 360px;
   height: 233px;
   text-align: left;
   margin-top: 2rem;
 }
+
 .energy .left-side > * {
   margin-bottom: 2rem;
 }
+
 .energy .left-side h2 {
   font-size: 42px;
   width: 80%;
 }
+
 .energy .left-side p {
   font-size: 18px;
   color: var(--gray-color);
   line-height: 1.6;
   width: 80%;
 }
+
 .energy .right-side {
   margin-top: 2rem;
   display: grid;
@@ -705,6 +808,7 @@ section {
   padding: 0 1rem;
   gap: 2rem;
 }
+
 .energy .right-side .box {
   height: 410px;
   border: 2px solid #3cab8f88;
@@ -716,20 +820,25 @@ section {
   padding: 0 2rem;
   background-color: #3cab8f10;
 }
+
 .energy .right-side .box:nth-child(3) {
   height: 365px;
 }
+
 .energy .right-side .box h3 {
   font-size: 20px;
 }
+
 .energy .right-side .box p {
   line-height: 1.5;
   color: var(--gray-color);
 }
+
 .energy .right-side .box span {
   cursor: pointer;
   color: #3cab90;
 }
+
 .energy .right-side .box span i {
   margin-left: 0.4rem;
 }
@@ -740,13 +849,16 @@ section {
     padding: 5rem 15rem;
     gap: 2rem;
   }
+
   .energy .left-side {
     margin-top: 0rem;
   }
+
   .energy .right-side {
     margin-top: 10rem;
     padding: 0;
   }
+
   .energy .right-side .box:nth-child(3) {
     height: 410px;
   }
@@ -757,19 +869,23 @@ section {
     padding: 2rem;
     gap: 2rem;
   }
+
   .energy .left-side {
     width: fit-content;
     height: 233px;
     align-self: center;
   }
+
   .energy .left-side h2 {
     font-size: 25px;
   }
+
   .energy .left-side p {
     font-size: 16px;
     color: var(--gray-color);
     line-height: 1.6;
   }
+
   .energy .right-side {
     margin-top: 2rem;
     padding: 0;
@@ -781,6 +897,7 @@ section {
     padding: 2rem 1rem;
     gap: 1rem;
   }
+
   .energy .left-side {
     width: fit-content;
     height: 150px;
@@ -790,18 +907,22 @@ section {
     font-size: 1rem;
     width: 100%;
   }
+
   .energy .left-side p {
     font-size: 0.8rem;
     color: var(--gray-color);
     line-height: 1.6;
     width: 100%;
   }
+
   .energy .left-side > * {
     margin-bottom: 1rem;
   }
+
   .energy .left-side img {
     margin: 0 auto 1rem;
   }
+
   .energy .right-side {
     margin-top: 4rem;
   }
@@ -821,11 +942,13 @@ section {
   align-items: center;
   text-align: left;
 }
+
 .our-values h2 {
   font-size: 42px;
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
+
 .our-values .p-1 {
   color: var(--gray-color);
   font-size: 16px;
@@ -834,6 +957,7 @@ section {
   margin-bottom: 1.5rem;
   text-align: center;
 }
+
 .our-values .our-values-examples {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -842,6 +966,7 @@ section {
   justify-content: center;
   width: 60%;
 }
+
 .our-values .our-values-examples .box {
   height: 420px;
   padding: 32px;
@@ -849,11 +974,13 @@ section {
   border-radius: 12px;
   border: 1px solid #3cab90;
 }
+
 .our-values .our-values-examples .box h3 {
   font-size: 20px;
   font-weight: 600;
   margin: 20px 0;
 }
+
 .our-values .our-values-examples .box p {
   color: var(--gray-color);
   margin: 20px 0;
@@ -864,9 +991,11 @@ section {
   .our-values {
     margin-top: 1.5rem;
   }
+
   .our-values h2 {
     margin-top: 2rem;
   }
+
   .our-values .p-1 {
     font-size: 14px;
     width: 100%;
@@ -888,6 +1017,7 @@ section {
   gap: 3rem;
   text-align: left;
 }
+
 .what-they-say .text {
   display: flex;
   flex-direction: column;
@@ -896,14 +1026,17 @@ section {
   width: 400px;
   justify-content: space-between;
 }
+
 .what-they-say .text h3 {
   font-size: 48px;
 }
+
 .what-they-say .text p {
   line-height: 1.5;
   color: #1c1c1c;
   font-size: 18px;
 }
+
 .what-they-say .card {
   display: flex;
   flex-direction: column;
@@ -914,22 +1047,26 @@ section {
   width: 708px;
   height: 443px;
 }
+
 .what-they-say .card .container-1,
 .what-they-say .card .container-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .what-they-say .card .container-1 p {
   color: #3cab90;
   font-weight: 600;
   font-size: 16px;
 }
+
 .what-they-say .card .container-1 .dots {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
+
 .what-they-say .card .container-1 .dots span {
   display: block;
   width: 8px;
@@ -937,9 +1074,11 @@ section {
   border-radius: 50%;
   background-color: #d9d9d9;
 }
+
 .what-they-say .card .container-1 .dots span:first-child {
   background-color: #6b6b6b;
 }
+
 .what-they-say .card p {
   color: #101828;
   font-size: 24px;
@@ -947,19 +1086,23 @@ section {
   font-weight: 500;
   width: 80%;
 }
+
 .what-they-say .card .container-2 .user-info {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 .what-they-say .card .container-2 .user-info div h4 {
   margin-bottom: 0.25rem;
 }
+
 .what-they-say .card .container-2 .arrows {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 .what-they-say .card .container-2 .arrows span {
   display: flex;
   justify-content: center;
@@ -971,9 +1114,11 @@ section {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .what-they-say .card .container-2 .arrows span:hover {
   background-color: #3cab8f5a;
 }
+
 .what-they-say .card .container-2 .arrows span > i {
   font-size: 22px;
 }
@@ -984,17 +1129,21 @@ section {
     width: 650px;
     height: 400px;
   }
+
   .what-they-say .card p {
     font-size: 1.2rem;
     width: 100%;
   }
+
   .what-they-say .card .container-2 .user-info div {
     font-size: 0.7rem;
   }
+
   .what-they-say .card .container-2 .arrows span {
     width: 38px;
     height: 38px;
   }
+
   .what-they-say .card .container-2 .arrows span > i {
     font-size: 18px;
   }
@@ -1018,6 +1167,7 @@ footer .up {
   justify-content: space-between;
   align-items: center;
 }
+
 footer .up .links {
   display: flex;
   flex-wrap: wrap;
@@ -1026,23 +1176,28 @@ footer .up .links {
   color: var(--white-color);
   font-weight: 300;
 }
+
 footer .up .links a {
   transition: var(--transition);
 }
+
 footer .up .links a:hover {
   color: #d2d1d1;
 }
+
 footer .up .subscibe {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   position: relative;
 }
+
 footer .up .subscibe span {
   color: var(--white-color);
   align-self: flex-start;
   font-weight: 300;
 }
+
 footer .up .subscibe input {
   background-color: #4d5156;
   border-radius: 109px;
@@ -1053,6 +1208,7 @@ footer .up .subscibe input {
   text-indent: 1.2rem;
   color: #b3bdc7;
 }
+
 footer .up .subscibe button {
   position: absolute;
   top: 28px;
@@ -1065,10 +1221,12 @@ footer .up .subscibe button {
   font-size: 1rem;
   font-weight: 300;
 }
+
 footer hr {
   border: none;
   border-top: 1px solid #71777d;
 }
+
 footer .down {
   display: flex;
   justify-content: space-between;
@@ -1077,12 +1235,15 @@ footer .down {
   font-size: 12px;
   line-height: 1.6;
 }
+
 footer .down .terms span a {
   transition: var(--transition);
 }
+
 footer .down .terms span a:hover {
   color: #b5bbc0;
 }
+
 footer .down .terms span:not(:first-child) {
   margin: 0 0.5rem;
 }
@@ -1092,10 +1253,12 @@ footer .down .terms span:not(:first-child) {
     min-height: 20vh;
     padding: 0 5rem;
   }
+
   footer .up {
     display: flex;
     flex-direction: column;
   }
+
   footer .up .box {
     display: flex;
     flex-direction: column;
@@ -1103,19 +1266,24 @@ footer .down .terms span:not(:first-child) {
     align-items: center;
     margin: 1rem;
   }
+
   footer .up .links {
     margin-top: 1rem;
   }
+
   footer .up .subscibe {
     margin-bottom: 1rem;
   }
+
   footer .up .subscibe input {
     width: 350px;
     height: 48px;
   }
+
   footer .up .subscibe button {
     width: 130px;
   }
+
   footer .down {
     text-align: center;
     justify-content: space-between;
@@ -1123,6 +1291,7 @@ footer .down .terms span:not(:first-child) {
     line-height: 1.6;
     gap: 0.7rem;
   }
+
   footer .down .terms span:not(:first-child) {
     margin: 0 0.4rem;
   }
@@ -1133,27 +1302,34 @@ footer .down .terms span:not(:first-child) {
     min-height: 25vh;
     padding: 0.5rem 0.5rem;
   }
+
   footer hr {
     margin: 0 0 1rem;
   }
+
   footer .up .subscibe {
     margin-bottom: 1rem;
   }
+
   footer .up .links {
     gap: 0.5rem;
     font-size: 0.8rem;
   }
+
   footer .up .subscibe .label {
     align-self: center;
   }
+
   footer .up .subscibe input {
     width: 300px;
     height: 35px;
   }
+
   footer .up .subscibe button {
     width: 100px;
-    height: 35px;
+    height: 34px;
   }
+
   footer .down {
     text-align: center;
     justify-content: center;
@@ -1161,6 +1337,7 @@ footer .down .terms span:not(:first-child) {
     line-height: 1.4;
     gap: 0.5rem;
   }
+
   footer .down .terms span:not(:first-child) {
     margin: 0 0.25rem;
   }
