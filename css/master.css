@@ -40,7 +40,7 @@ ul {
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark light;
+  /* color-scheme: dark light; for dark mood */
 }
 
 button {
